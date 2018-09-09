@@ -7,8 +7,11 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
+    "clear-cache": "rimraf -rf ./node_modules/.cache/babel-loader/*",
     "dev": "webpack-dev-server",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "heroku-postbuild": "yarn clear-cache && yarn build",
+    "test": "eslint . && stylelint **/*.scss"
   },
   "dependencies": {
     "animejs": "^2.2.0",
