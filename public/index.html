@@ -6,78 +6,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <title>Trançado | Head Map</title>
   <link rel="stylesheet" type="text/css" href="build/style.css"/>
-
-<link 
-        rel="stylesheet" 
-        href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"
-    />
 </head>
 
 <body>
   <section>
+
     <div id="map"></div>
-    <svg 
-  version="1.1" 
-  id="face" 
-  xmlns="http://www.w3.org/2000/svg" 
-  xmlns:xlink="http://www.w3.org/1999/xlink" 
-  x="0px" y="0px"
-  viewBox="0 0 665.7 506.1" 
-  style="enable-background:new 0 0 665.7 506.1;" 
-  xml:space="preserve"
->
-<style type="text/css">
-  .st0{clip-path:url(#SVGID_2_);fill:#363737;}
-  .st1{clip-path:url(#SVGID_2_);}
-  .st2{fill:#1E2020;}
-  .st3{clip-path:url(#SVGID_2_);fill:#1E2020;}
-  .st4{fill:#FF008C;}
-</style>
-<g>
-  <g>
-    <defs>
-      <path id="SVGID_1_" d="M645.2,119.7l-7.5-102.5C315.6,290.1,5.7,0,5.7,0L5.2,114.5c0,0-1.9-3-5.2-8.5
-        c2.8,54,23.7,223.7,173.1,300.5l56,29c0,0,56.2,56.2,87,68c26,10,49.3-12.2,75-37c25.8-24.7,54-52,54-52s64-22,103-67
-        c35.5-40.9,95-143.9,117.5-260.1C653.7,108.4,645.2,119.7,645.2,119.7z"/>
-    </defs>
-    <clipPath id="SVGID_2_">
-      <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-    </clipPath>
-    <path class="st0" d="M645.2,119.7l-7.5-102.5C315.6,290.1,5.7,0,5.7,0L5.2,114.5c0,0-1.9-3-5.2-8.5c2.8,54,23.7,223.7,173.1,300.5
-      l56,29c0,0,56.2,56.2,87,68c26,10,49.3-12.2,75-37c25.8-24.7,54-52,54-52s64-22,103-67c35.5-40.9,95-143.9,117.5-260.1
-      C653.7,108.4,645.2,119.7,645.2,119.7z"/>
-    <g class="st1">
-      <path class="st2" d="M174.6,426.6c0,0,55-45,76-11s15,65,15,65"/>
-      <path class="st2" d="M399.6,460.6c0,0-16.6-68.8,27-63c45,6,54,12,54,12"/>
-    </g>
-    <path class="st3" d="M40.6,236.5c0,0,115,75,144,84.1c29,9,110,28,110,28s-14,14-43,7c-29-7-97-37-121-45
-      c-14.2-4.7-43.2-21.8-64.5-34.9C51.6,266.6,40.6,236.5,40.6,236.5z"/>
-    <polygon class="st3" points="355.6,348.6 472.6,315.7 535.6,276.7 588.6,248.7 615.6,236.7 573.6,270.7 513.6,304.7 485.6,328.7 
-      417.6,348.6 371.6,357.6     "/>
-  </g>
-  <g id="k8iwok.tif_5_">
-  </g>
-</g>
-<g>
-  <g>
-    <path class="st4" d="M301.6,13.5c1.9,0,1.9-3,0-3C299.7,10.5,299.7,13.5,301.6,13.5L301.6,13.5z"/>
-  </g>
-</g>
-</svg>
+
+    <div id="place">
+      <h1>Quilombo</h1>
+    </div>
+
+    <div id="face" >
+      <img src="/assets/images/cabeca.png">
+    </div>
+
+    <!--<svg 
+      version="1.1" 
+      id="face" 
+      xmlns="http://www.w3.org/2000/svg" 
+      xmlns:xlink="http://www.w3.org/1999/xlink" 
+      x="0px"
+      y="0px"
+      viewBox="0 0 665.7 506.1" 
+      xml:space="preserve"
+    >
+      <style type="text/css">
+        .st0{clip-path:url(#SVGID_2_);fill:#363737;}
+        .st1{clip-path:url(#SVGID_2_);}
+        .st2{fill:#1E2020;}
+        .st3{clip-path:url(#SVGID_2_);fill:#1E2020;}
+        .st4{fill:#FF008C;}
+      </style>
+      <g>
+        <g>
+          <defs>
+            <path id="SVGID_1_" d="M645.2,119.7l-7.5-102.5C315.6,290.1,5.7,0,5.7,0L5.2,114.5c0,0-1.9-3-5.2-8.5
+              c2.8,54,23.7,223.7,173.1,300.5l56,29c0,0,56.2,56.2,87,68c26,10,49.3-12.2,75-37c25.8-24.7,54-52,54-52s64-22,103-67
+              c35.5-40.9,95-143.9,117.5-260.1C653.7,108.4,645.2,119.7,645.2,119.7z"/>
+          </defs>
+          <clipPath id="SVGID_2_">
+            <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+          </clipPath>
+          <path class="st0" d="M645.2,119.7l-7.5-102.5C315.6,290.1,5.7,0,5.7,0L5.2,114.5c0,0-1.9-3-5.2-8.5c2.8,54,23.7,223.7,173.1,300.5
+            l56,29c0,0,56.2,56.2,87,68c26,10,49.3-12.2,75-37c25.8-24.7,54-52,54-52s64-22,103-67c35.5-40.9,95-143.9,117.5-260.1
+            C653.7,108.4,645.2,119.7,645.2,119.7z"/>
+          <g class="st1">
+            <path class="st2" d="M174.6,426.6c0,0,55-45,76-11s15,65,15,65"/>
+            <path class="st2" d="M399.6,460.6c0,0-16.6-68.8,27-63c45,6,54,12,54,12"/>
+          </g>
+          <path class="st3" d="M40.6,236.5c0,0,115,75,144,84.1c29,9,110,28,110,28s-14,14-43,7c-29-7-97-37-121-45
+            c-14.2-4.7-43.2-21.8-64.5-34.9C51.6,266.6,40.6,236.5,40.6,236.5z"/>
+          <polygon class="st3" points="355.6,348.6 472.6,315.7 535.6,276.7 588.6,248.7 615.6,236.7 573.6,270.7 513.6,304.7 485.6,328.7 
+            417.6,348.6 371.6,357.6     "/>
+        </g>
+        <g id="k8iwok.tif_5_">
+        </g>
+      </g>
+      <g>
+        <g>
+          <path class="st4" d="M301.6,13.5c1.9,0,1.9-3,0-3C299.7,10.5,299.7,13.5,301.6,13.5L301.6,13.5z"/>
+        </g>
+      </g>
+    </svg>-->
+
   </section>
-
-
-
-  <!--<footer>
-    <p>footer</p>
-  </footer>-->
-
-
   <script type="text/javascript" src="build/script.js"></script>
-
-  
-
-  
 </body>
 
 </html>

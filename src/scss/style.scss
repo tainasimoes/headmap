@@ -8,18 +8,92 @@ body {
 }
 
 section {
+	height: 100vh;
+	width: 100vw;
+  overflow: hidden;
+
 	#map { 
+		height: 120vh;
+		width: 120vw;
+		position: relative;
+		left: -20vw;
+	}
+
+	#place {
+		position: absolute;
+		z-index: 9999;
+		width: 100vw;
 		height: 100vh;
-		width: 100%;
+		background-color: rgba(0, 0, 0, 0);
+		top: 0;
+		left: 0;
+
+		@keyframes changeMap {
+			//from {
+				//background-color: rgba(0, 0, 0, 0);
+			//}
+			//to {
+				//background-color: rgba(0, 0, 0, 1);
+			//}
+
+			20%, 100% {
+		    background-color: rgba(0, 0, 0, 0);
+		  }
+		  0% {
+		    background-color: rgba(0, 0, 0, 0);
+		  }
+		  10% {
+		    background-color: rgba(0, 0, 0, 1);
+		  }
+		}
+
+		animation-name: changeMap;
+    animation-timing-function: ease;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+
+		h1 {
+			color: #666;
+			font-size: 60px;
+			text-align: center;
+			margin: 20px
+		}
+	}
+
+	@keyframes moveHead {
+		from {
+			opacity: 0;
+			transform: translateX(-50%) rotate(90deg);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(-50%) rotate(0deg);
+		}
 	}
 
 	#face {
 		position: absolute;
-    bottom: 50px;
-    z-index: 9999;
-    width: 35%;
+    bottom: 20px;
+    z-index: 99999;
+    width: 25%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotate(90deg);
+    opacity: 0;
+
+    animation-name: moveHead;
+    animation-delay: 3s;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    // animation-iteration-count: infinite;
+
+    img {
+    	display: block;
+    	position: relative;
+    	width: 100%;
+    }
+
 	}
 }
 
