@@ -4,106 +4,77 @@
 
 body {
 	color: #fff;
-	background-color: #000;
+	// background-color: #000;
+	background-color: red;
 }
 
 section {
 	height: 100vh;
 	width: 100vw;
-  overflow: hidden;
+  // overflow: hidden;
 
-	#map { 
-		height: 120vh;
-		width: 120vw;
-		position: relative;
-		left: -20vw;
+  .container {
+
+  	h1 {
+  		position: absolute;
+  		z-index: 99999;
+			color: #666;
+			font-size: 20px;
+			text-align: center;
+			margin: 20px
+		}
+
+		ul {
+			display: flex;
+			li {
+				overflow: hidden;
+				margin: 0 20px;
+			}
+		}
+
+		.map { 
+			height: 120vh;
+			width: 120vw;
+			position: relative;
+			left: -20vw;
+		}
+
+		#face {
+			position: absolute;
+	    bottom: 20px;
+	    z-index: 99999;
+	    width: 25%;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    img {
+	    	display: block;
+	    	position: relative;
+	    	width: 100%;
+	    }
+		}
 	}
 
 	#place {
 		position: absolute;
-		z-index: 9999;
+		z-index: 99999;
 		width: 100vw;
 		height: 100vh;
-		background-color: rgba(0, 0, 0, 0);
+		background-color: rgba(250, 0, 0, 1);
 		top: 0;
 		left: 0;
 
-		@keyframes changeMap {
-			//from {
-				//background-color: rgba(0, 0, 0, 0);
-			//}
-			//to {
-				//background-color: rgba(0, 0, 0, 1);
-			//}
-
-			20%, 100% {
-		    background-color: rgba(0, 0, 0, 0);
-		  }
-		  0% {
-		    background-color: rgba(0, 0, 0, 0);
-		  }
-		  10% {
-		    background-color: rgba(0, 0, 0, 1);
-		  }
-		}
-
-		animation-name: changeMap;
-    animation-timing-function: ease;
-    animation-duration: 10s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-
-		h1 {
-			color: #666;
-			font-size: 60px;
-			text-align: center;
-			margin: 20px
-		}
+		
 	}
 
-	@keyframes moveHead {
-		from {
-			opacity: 0;
-			transform: translateX(-50%) rotate(90deg);
-		}
-		to {
-			opacity: 1;
-			transform: translateX(-50%) rotate(0deg);
-		}
-	}
-
-	#face {
+	#intro {
 		position: absolute;
-    bottom: 20px;
-    z-index: 99999;
-    width: 25%;
-    left: 50%;
-    transform: translateX(-50%) rotate(90deg);
-    opacity: 0;
-
-    animation-name: moveHead;
-    animation-delay: 3s;
-    animation-timing-function: ease;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    // animation-iteration-count: infinite;
-
-    img {
-    	display: block;
-    	position: relative;
-    	width: 100%;
-    }
-
+		z-index: 99999;
+		background-color: rgba(250, 0, 250, 1);
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		text-align: center;
 	}
 }
-
-footer {
-	background-color: blue;
-	position: absolute;
-	bottom: 0;
-	z-index: 9999;
-	width: 100%;
-	padding: 10px 20px;
-}
-
 

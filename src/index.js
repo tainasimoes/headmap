@@ -4,22 +4,41 @@ import $ from 'jquery';
 import leaflet from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import './scss/style.scss';
-
-  var mymap = L.map('map').setView([-22.914395,-43.5878726], 11);
+  
+  // Quilombo Pedra do Sal - Rio de Janeiro
+  var mymap1 = L.map('map1').setView([-22.9032936,-43.1870534], 16);
 
   L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(mymap);
+  }).addTo(mymap1);
 
-  var q = [
+  // Quilombo São João da Serra - Valença
+  var mymap2 = L.map('map2').setView([-22.5298981,-44.0724162], 16);
+  L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(mymap2);
+
+  // Quilombo São João da Serra - Valença
+  var mymap3 = L.map('map3').setView([-22.5298981,-44.0724162], 16);
+  L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(mymap3);
+
+  // Quilombo São João da Serra - Valença
+  var mymap4 = L.map('map4').setView([-22.5298981,-44.0724162], 16);
+  L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(mymap4);
+
+  /*var q = [
     {'name': 'Quilombo Pedra do Sal'},
     {'name': 'Quilombo São João da Serra'},
     {'name': 'Quilombo de Sacopã'},
     {'name': 'Quilombo Madureira'}
-  ];
+  ];*/
 
   // Quilombos | Latitude-Longitude:      
-  var pointList = [];
+  /*var pointList = [];
 
   // Quilombo Pedra do Sal - Rio de Janeiro
   var p = new L.LatLng(-22.9032936,-43.1870534);
@@ -35,9 +54,9 @@ import './scss/style.scss';
 
   // Quilombo Madureira
   var p = new L.LatLng(-22.8697596,-43.3371972);
-  pointList.push(p);
+  pointList.push(p);*/
 
-  var sec=0;
+  /*var sec=0;
   var quilombo = $('h1');
   var timer = setInterval(
     function() {
@@ -55,4 +74,4 @@ import './scss/style.scss';
 
       }
     },
-  10000);
+  10000);*/
