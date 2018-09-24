@@ -2,44 +2,603 @@
 @import 'fonts';
 @import 'bootstrap';
 
+@keyframes animeX { 
+	from { rx: 0; opacity: 0; }
+	to { rx: 5.8; opacity: 1; }
+}
+@keyframes animeY { 
+	from { ry: 0; opacity: 0; }
+	to { ry: 5.8; opacity: 1; }
+}
+
+@keyframes face { 
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes title { 
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+// $pos: -1280*10px;
+
+//ul {
+	//transform: translateX($pos);
+//}
+
+.ellipseX { animation: animeX .2s linear normal forwards; rx: 0; opacity: 0; }
+.ellipseY { animation: animeY .2s linear normal forwards; ry: 0; opacity: 0; }
+
+.face { animation: face .8s ease normal forwards; opacity: 0; }
+.title { animation: title 10s ease normal forwards; opacity: 0; }
+
+
+#pds {
+	.pedradosal { fill: #734EFF; }
+	.title { animation-delay: 6s; }
+	.face { animation-delay: 4s; }
+	.linha1 {
+		@for $i from 1 through 10 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 2; }
+		}
+	}
+	.linha2 {
+		@for $i from 1 through 7 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 3; }
+		}
+	}
+	.linha3 {
+		@for $i from 1 through 6 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 2; }
+		}
+	}
+	.linha4 {
+		@for $i from 1 through 1 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 2; }
+		}
+	}
+	.linha5 {
+		@for $i from 1 through 9 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 2; }
+		}
+	}
+	.linha6 {
+		@for $i from 1 through 5 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 4; }
+		}
+	}
+	.linha7 {
+		@for $i from 1 through 3 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 3; }
+		}
+	}
+	.linha8 {
+		@for $i from 1 through 3 {
+	  	ellipse:nth-child(#{$i}) {animation-delay: (0.2s * $i) + 2.2; }
+		}
+	}
+	.linha9 {
+		@for $i from 1 through 2 {
+	  	ellipse:nth-child(#{$i}) {animation-delay: (0.2s * $i) + 3; }
+		}
+	}
+	.linha10 {
+		@for $i from 1 through 3 {
+	  	ellipse:nth-child(#{$i}) {animation-delay: (0.2s * $i) + 3.4; }
+		}
+	}
+	.linha11 {
+		@for $i from 1 through 8 {
+	  	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2; }
+		}
+	}
+	.linha12 {
+		@for $i from 1 through 8 {
+	  	ellipse:nth-child(#{$i}) { animation-delay: (0.4s * $i) + 3.4; }
+		}
+	}
+	.linha13 {
+		@for $i from 1 through 3 {
+	  	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.2; }
+		}
+	}
+	.linha14 {
+		@for $i from 1 through 5 {
+	  	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2.8; }
+		}
+	}
+}
+
+$opa: 40;
+
+#sjs {
+	.ellipseFill02 { fill: #FF3F32; }
+	.title { animation-delay: 6+40+2s; }
+	.face { animation-delay: 4+40+2s; }
+	.linha1 {
+		@for $i from 1 through 28 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 2 + $opa + 2; }
+		}
+	}
+	.linha2 {
+		@for $i from 1 through 8 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 4.6 + $opa + 2; }
+		}
+	}
+	.linha3 {
+		@for $i from 1 through 3 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 4.6 + $opa + 2; }
+		}
+	}
+	.linha4 {
+		@for $i from 1 through 19 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 2 + $opa + 2; }
+		}
+	}
+	.linha5 {
+		@for $i from 1 through 4 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 3.6 + $opa + 2; }
+		}
+	}
+	.linha6 {
+		@for $i from 1 through 5 {
+	  	ellipse:nth-child(#{$i}){ animation-delay: (0.2s * $i) + 3.6 + $opa + 2; }
+		}
+	}
+}
+
+$epa: 80;
+
+#scp {
+	.ellipseFill03 { fill: #37FFFF; }
+	.title { animation-delay: 6+80+2s; }
+	.face { animation-delay: 4+80+2s; }
+	.linha1 {
+    @for $i from 1 through 8 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $epa + 2; }
+    }
+  }
+  .linha2 {
+    @for $i from 1 through 6 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2.8 + $epa + 2; }
+    }
+  }
+  .linha3 {
+    @for $i from 1 through 6 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2.6 + $epa + 2; }
+    }
+  }
+  .linha4 {
+    @for $i from 1 through 5 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3 + $epa + 2; }
+    }
+  }
+  .linha5 {
+    @for $i from 1 through 5 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.2 + $epa + 2; }
+    }
+  }
+  .linha6 {
+    @for $i from 1 through 2 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.6 + $epa + 2; }
+    }
+  }
+  .linha7 {
+    @for $i from 1 through 2 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.8 + $epa + 2; }
+    }
+  }
+  .linha8 {
+    @for $i from 1 through 2 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 4 + $epa + 2; }
+    }
+  }
+  .linha9 {
+    @for $i from 1 through 4 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.6 + $epa + 2; }
+    }
+  }
+  .linha10 {
+    @for $i from 1 through 8 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $epa + 2; }
+    }
+  }
+  .linha11 {
+    @for $i from 1 through 7 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2.8 + $epa + 2; }
+    }
+  }
+  .linha12 {
+    @for $i from 1 through 4 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $epa + 2; }
+    }
+  }
+
+  .linha13 {
+    @for $i from 1 through 2 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3 + $epa + 2; }
+    }
+  }
+
+  .linha14 {
+    @for $i from 1 through 5 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2.6 + $epa + 2; }
+    }
+  }
+
+  .linha15 {
+    @for $i from 1 through 5 {
+      ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2.6 + $epa + 2; }
+    }
+  }
+}
+
+$pau: 120;
+
+#mdr {
+	.ellipseFill04 { fill: #34FF33; }
+	.title { animation-delay: 6+120+2s; }
+	.face { animation-delay: 4+120+2s; }
+
+	.linha1 {
+		@for $i from 1 through 4 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3 + $pau + 2; }
+  	}
+	}
+	.linha2 {
+		@for $i from 1 through 3 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $pau + 2; }
+  	}
+	}
+	.linha3 {
+		@for $i from 1 through 4 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.8 + $pau + 2; }
+  	}
+	}
+	.linha4 {
+		@for $i from 1 through 10 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $pau + 2; }
+  	}
+	}
+	.linha5 {
+		@for $i from 1 through 4 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.4 + $pau + 2; }
+  	}
+	}
+	.linha6 {
+		@for $i from 1 through 3 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.6 + $pau + 2; }
+  	}
+	}
+	.linha7 {
+		@for $i from 1 through 4 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.2 + $pau + 2; }
+  	}
+	}
+	.linha8 {
+		@for $i from 1 through 7 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.8 + $pau + 2; }
+  	}
+	}
+	.linha9 {
+		@for $i from 1 through 6 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $pau + 2; }
+  	}
+	}
+	.linha10 {
+		@for $i from 1 through 12 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $pau + 2; }
+  	}
+	}
+	.linha11 {
+		@for $i from 1 through 4 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.4 + $pau + 2; }
+  	}
+	}
+	.linha12 {
+		@for $i from 1 through 3 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.6 + $pau + 2; }
+  	}
+	}
+	.linha13 {
+		@for $i from 1 through 8 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 4.2 + $pau + 2; }
+  	}
+	}
+	.linha14 {
+		@for $i from 1 through 4 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2.6 + $pau + 2; }
+  	}
+	}
+
+	.linha15 {
+		@for $i from 1 through 2 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3 + $pau + 2; }
+  	}
+	}
+
+	.linha16 {
+		@for $i from 1 through 7 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.4 + $pau + 2; }
+  	}
+	}
+
+	.linha17 {
+		@for $i from 1 through 5 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.6 + $pau + 2; }
+  	}
+	}
+
+	.linha18 {
+		@for $i from 1 through 8 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.6 + $pau + 2; }
+  	}
+	}
+
+	.linha19 {
+		@for $i from 1 through 7 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 4.8 + $pau + 2; }
+  	}
+	}
+
+	.linha20 {
+		@for $i from 1 through 8 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 4 + $pau + 2; }
+  	}
+	}
+
+	.linha21 {
+		@for $i from 1 through 7 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.8 + $pau + 2; }
+  	}
+	}
+
+	.linha22 {
+		@for $i from 1 through 8 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 4.6 + $pau + 2; }
+  	}
+	}
+}
+
+$guito: 160;
+
+#agb {
+	.ellipseFill05 { fill: #FF4EC7; }
+	.title { animation-delay: 6+160+2s; }
+	.face { animation-delay: 4+160+2s; }
+
+	.linha1 {
+		@for $i from 1 through 4 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $guito + 2; }
+  	}
+	}
+	.linha2 {
+		@for $i from 1 through 5 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $guito + 2; }
+  	}
+	}
+	.linha3 {
+		@for $i from 1 through 7 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $guito + 2; }
+  	}
+	}
+	.linha4 {
+		@for $i from 1 through 6 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.2 + $guito + 2; }
+  	}
+	}
+	.linha5 {
+		@for $i from 1 through 6 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3 + $guito + 2; }
+  	}
+	}
+	.linha6 {
+		@for $i from 1 through 4 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 4.2 + $guito + 2; }
+  	}
+	}
+	.linha7 {
+		@for $i from 1 through 6 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 3.4 + $guito + 2; }
+  	}
+	}
+	.linha8 {
+		@for $i from 1 through 7 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2.8 + $guito + 2; }
+  	}
+	}
+	.linha9 {
+		@for $i from 1 through 3 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2.6 + $guito + 2; }
+  	}
+	}
+	.linha10 {
+		@for $i from 1 through 15 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2.6 + $guito + 2; }
+  	}
+	}
+}
+
+$tai: 200;
+
+#grt {
+	.ellipseFill06 { fill: #FFFF50; }
+	.title { animation-delay: 6+200+2s; }
+	.face { animation-delay: 4+200+2s; }
+
+	.linha1 {
+		@for $i from 1 through 11 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $tai + 2; }
+  	} 
+	}
+	.linha2 {
+		@for $i from 1 through 11 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $tai + 2; }
+  	} 
+	}
+	.linha3 {
+		@for $i from 1 through 15 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 4.2 + $tai + 2; }
+  	} 
+	}
+	.linha4 {
+		@for $i from 1 through 12 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $tai + 2; }
+  	} 
+	}
+	.linha5 {
+		@for $i from 1 through 10 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $tai + 2; }
+  	} 
+	}
+	.linha6 {
+		@for $i from 1 through 8 {
+    	ellipse:nth-child(#{$i}) { animation-delay: (0.2s * $i) + 2 + $tai + 2; }
+  	} 
+	}
+}
+
+.leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-bar {
+	display: none !important;
+}
+
+@keyframes slide { 
+	from { 
+		transform: translateX(100vw);
+		opacity: 0;
+	}
+	to { 
+		transform: translateX(0); 
+		opacity: 1;
+	}
+}
+li {
+
+	animation: slide .6s linear normal forwards;
+	animation-iteration-count: 1, repeat;
+	// animation: slide .6s linear infinite;
+}
+
+#pds {
+	animation-delay: 0s;
+	
+}
+#qui_text_01 {
+	animation-delay: 20s;
+}
+
+#sjs {
+	animation-delay: 40s;
+}
+#qui_text_02 {
+	animation-delay: 60s;
+}
+
+#scp {
+	animation-delay: 80s;
+}
+#qui_text_03 {
+	animation-delay: 100s;
+}
+
+#mdr {
+	animation-delay: 120s;
+}
+#qui_text_04 {
+	animation-delay: 140s;
+}
+
+#agb {
+	animation-delay: 160s;
+}
+#qui_text_05 {
+	animation-delay: 180s;
+}
+
+#grt {
+	animation-delay: 200s;
+}
+#qui_text_06 {
+	animation-delay: 220s;
+}
+
+
+
 body {
 	color: #fff;
-	// background-color: #000;
-	background-color: red;
+	background-color: black;
 }
 
 section {
-	height: 100vh;
-	width: 100vw;
-  // overflow: hidden;
-
   .container {
-
-  	h1 {
-  		position: absolute;
-  		z-index: 99999;
-			color: #666;
-			font-size: 20px;
-			text-align: center;
-			margin: 20px
-		}
+  	width: 1280px;
+		height: 720px;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		margin: 0 auto;
 
 		ul {
+			margin: 0 auto;
+			padding: 0;
+			width: calc(1280px * 12);
+			height: 720px;
 			display: flex;
+			position: relative;
+
 			li {
 				overflow: hidden;
-				margin: 0 20px;
+				width: 1280px;
+				height: 720px;
+				background: black;
+				position: relative;
+				position: fixed;
+				transform: translateX(100vw);
+				opacity: 0;
+				// display: none;
+				// transition: transform .5s ease;
+
+				.tranca {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 99999;
+				}
+
+				h2 {
+		  		position: absolute;
+			    z-index: 99999;
+			    color: #666;
+			    font-size: 60px;
+			    text-align: center;
+			    margin: 20px 0;
+			    left: 50%;
+			    width: 100%;
+			    transform: translateX(-50%);
+			    // top: -50%;
+			    // transition: top .4s ease;
+				}
+				h3 {
+					font-size: 60px;
+					position:absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					margin: 0;
+					padding: 0;
+				}
 			}
 		}
-
 		.map { 
-			height: 120vh;
-			width: 120vw;
+			width: 1280px;
+			height: 720px;
 			position: relative;
-			left: -20vw;
 		}
 
-		#face {
+		#face, .face {
 			position: absolute;
 	    bottom: 20px;
 	    z-index: 99999;
@@ -62,8 +621,6 @@ section {
 		background-color: rgba(250, 0, 0, 1);
 		top: 0;
 		left: 0;
-
-		
 	}
 
 	#intro {
