@@ -1,0 +1,115 @@
+
+
+///////////////////////////
+
+body {
+	color: #fff;
+	background-color: black;
+}
+
+section {
+  .container {
+		ul {
+			width: 100%;
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+
+			li {
+				background-color: blue;
+				padding: 5px;
+				overflow: hidden;
+				width: calc(33.33% - 10px);
+				height: calc(50vh - 10px);
+				position: relative;
+
+				.tranca {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+				}
+
+				h2 {
+		  		position: absolute;
+			    z-index: 1;
+			    color: #666;
+			    font-size: 60px;
+			    text-align: center;
+			    margin: 20px 0;
+			    left: 50%;
+			    width: 100%;
+			    transform: translateX(-50%);
+				}
+			}
+		}
+		.map { 
+			width: 100%;
+			height: 100%;
+			position: relative;
+			z-index: 0;
+		}
+
+		#face {
+			position: absolute;
+	    bottom: 20px;
+	    z-index: 1;
+	    width: 25%;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    img {
+	    	display: block;
+	    	position: relative;
+	    	width: 100%;
+	    }
+		}
+	}
+}
+
+.text {
+	display: none;
+}
+
+.leaflet-control-container {
+	display: none !important;
+}
+
+@keyframes animeX { 
+	from { rx: 0; opacity: 0; }
+	to { rx: 5.8; opacity: 1; }
+}
+@keyframes animeY { 
+	from { ry: 0; opacity: 0; }
+	to { ry: 5.8; opacity: 1; }
+}
+
+.ellipseX { animation: animeX .2s linear normal forwards; }
+.ellipseY { animation: animeY .2s linear normal forwards; }
+
+#pds {
+	.pedradosal { fill: #734EFF; }
+}
+
+#sjs {
+	.ellipseFill02 { fill: #FF3F32; }
+}
+
+#scp {
+	.ellipseFill03 { fill: #37FFFF; }
+}
+
+#mdr {
+	.ellipseFill04 { fill: #34FF33; }
+}
+
+#agb {
+	.ellipseFill05 { fill: #FF4EC7; }
+}
+
+#grt {
+	.ellipseFill06 { fill: #FFFF50; }
+}
+
+
